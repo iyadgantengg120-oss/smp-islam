@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Berita | SMP Islam Parung</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">
+        <img src="img/logo.jpeg" alt="Logo SMP Islam Parung" class="brand-logo">
+        <span class="brand-text">
+          <span class="brand-name">SMP Islam Parung</span>
+          <span class="brand-sub">Yayasan Al-Manshuriyah Parung</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Buka menu">☰</button>
+
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="profil.html">Profil</a></li>
+          <li><a href="akademik.html">Akademik</a></li>
+          <li><a href="kesiswaan.html">Kesiswaan</a></li>
+          <li><a href="prestasi.html">Prestasi</a></li>
+          <li><a href="berita.html" class="active">Berita</a></li>
+          <li><a href="galeri.html">Galeri</a></li>
+          <li><a href="fasilitas.html">Fasilitas</a></li>
+          <li><a href="virtual-tour.html">Virtual Tour</a></li>
+          <li><a href="daftar.html" class="btn-daftar">Daftar</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="container">
+        <h1>Berita &amp; Kegiatan</h1>
+        <p>INFO TERKINI DARI SMP ISLAM PARUNG</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <div class="search-box">
+          <input type="search" id="cariBerita" placeholder="Cari berita, misalnya: futsal, paskibra...">
+        </div>
+
+        <div class="grid-3" id="beritaList"></div>
+
+        <p class="empty-msg" id="beritaKosong" hidden>Berita yang kamu cari tidak ditemukan.</p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <h3>SMP Islam Parung</h3>
+      <p>Yayasan Al-Manshuriyah Parung</p>
+      <p>Jl. Raya Parung No. 648, Parung, Kab. Bogor</p>
+      <p>Telp: (0251) 8611451</p>
+      <p>Email: info@smpiparung.sch.id</p>
+      <p class="copyright">&copy; 2026 SMP Islam Parung. Hak cipta dilindungi.</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/6281317799846" class="wa-float" target="_blank" rel="noopener" aria-label="Chat WhatsApp">WA</a>
+
+  <script src="js/main.js"></script>
+  <script src="js/berita.js"></script>
+</body>
+</html>

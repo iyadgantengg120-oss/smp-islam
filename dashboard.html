@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Dashboard Pendaftar | SMP Islam Parung</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body class="admin-body">
+
+  <header class="admin-bar">
+    <div class="container">
+      <span class="admin-brand">
+        <img src="../img/logo.jpeg" alt="Logo">
+        Dashboard Pendaftar PPDB
+      </span>
+      <div class="bar-actions">
+        <span id="emailAdmin"></span>
+        <button class="btn btn-outline btn-sm" id="tombolKeluar">Keluar</button>
+      </div>
+    </div>
+  </header>
+
+  <p class="pesan-muat" id="pesanMuat">Memuat data...</p>
+
+  <main class="container admin-main" id="konten" hidden>
+
+    <h1 class="cetak-judul" id="cetakJudul"></h1>
+
+    <div class="stat-row">
+      <div class="stat-card"><span>Total Pendaftar</span><strong id="statTotal">0</strong></div>
+      <div class="stat-card"><span>Jalur Reguler</span><strong id="statReguler">0</strong></div>
+      <div class="stat-card"><span>Jalur Prestasi</span><strong id="statPrestasi">0</strong></div>
+      <div class="stat-card"><span>Jalur Afirmasi</span><strong id="statAfirmasi">0</strong></div>
+    </div>
+
+    <div class="toolbar">
+      <input type="search" id="cari" placeholder="Cari nama, NISN, atau no. pendaftaran...">
+      <select id="filterJalur">
+        <option value="">Semua jalur</option>
+        <option>Reguler</option>
+        <option>Prestasi</option>
+        <option>Afirmasi</option>
+      </select>
+      <button class="btn btn-navy btn-sm" id="tombolCetak">Cetak</button>
+      <button class="btn btn-gold btn-sm" id="tombolExcel">Download Excel</button>
+    </div>
+
+    <p class="info-jumlah" id="infoJumlah"></p>
+
+    <div class="table-wrap">
+      <table class="data">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>No. Pendaftaran</th>
+            <th>Nama</th>
+            <th>NISN</th>
+            <th>L/P</th>
+            <th>Asal SD/MI</th>
+            <th>Jalur</th>
+            <th>HP Orang Tua</th>
+            <th>Tanggal Daftar</th>
+            <th class="kolom-aksi">Aksi</th>
+          </tr>
+        </thead>
+        <tbody id="isiTabel"></tbody>
+      </table>
+    </div>
+
+  </main>
+
+  <dialog class="detail" id="detail">
+    <div class="detail-head">
+      <h2 id="detailJudul">Detail Pendaftar</h2>
+      <button class="btn btn-gold btn-sm" id="tutupDetail">Tutup</button>
+    </div>
+    <div class="detail-body" id="detailIsi"></div>
+  </dialog>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="../js/config.js"></script>
+  <script src="../js/admin-dashboard.js"></script>
+</body>
+</html>

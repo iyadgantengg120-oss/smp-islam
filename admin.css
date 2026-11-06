@@ -1,0 +1,377 @@
+/* ===== ADMIN ===== */
+.admin-body {
+  background: var(--bg-soft);
+  min-height: 100vh;
+}
+
+.admin-bar {
+  background: var(--navy);
+  border-bottom: 3px solid var(--gold);
+}
+
+.admin-bar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 64px;
+}
+
+.admin-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--gold-light);
+  font-weight: 700;
+}
+
+.admin-brand img {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+  background: var(--white);
+  border-radius: 50%;
+  padding: 3px;
+  border: 2px solid var(--gold);
+}
+
+.bar-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #c9d3ee;
+  font-size: 0.85rem;
+}
+
+button.btn {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+button.btn-gold,
+button.btn-navy {
+  border: none;
+}
+
+.btn-sm {
+  padding: 9px 20px;
+  font-size: 0.85rem;
+}
+
+.btn-navy {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.btn-navy:hover {
+  background: var(--navy-dark);
+  transform: translateY(-2px);
+}
+
+/* ----- Login ----- */
+.login-wrap {
+  min-height: calc(100vh - 67px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--white);
+  border-radius: 18px;
+  padding: 36px 30px;
+  border-top: 5px solid var(--gold);
+  box-shadow: 0 14px 36px rgba(11, 31, 75, 0.14);
+}
+
+.login-card h1 {
+  color: var(--navy);
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
+.login-card .sub {
+  color: #5b6a93;
+  font-size: 0.9rem;
+  margin-bottom: 22px;
+}
+
+.login-card .field {
+  margin-bottom: 16px;
+}
+
+.field input[type="email"],
+.field input[type="password"] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid #d5dbec;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  transition: 0.2s;
+}
+
+.field input[type="email"]:focus,
+.field input[type="password"]:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 4px rgba(224, 169, 22, 0.16);
+}
+
+/* ----- Dashboard ----- */
+.admin-main {
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+.admin-main[hidden] {
+  display: none;
+}
+
+.pesan-muat {
+  text-align: center;
+  padding: 60px 20px;
+  color: #5b6a93;
+}
+
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background: var(--white);
+  border-radius: 14px;
+  padding: 18px 20px;
+  border-left: 5px solid var(--gold);
+  box-shadow: 0 6px 18px rgba(11, 31, 75, 0.08);
+}
+
+.stat-card span {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.stat-card strong {
+  font-size: 1.8rem;
+  color: var(--navy);
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.toolbar input[type="search"],
+.toolbar select {
+  padding: 11px 16px;
+  border: 2px solid #d5dbec;
+  border-radius: 50px;
+  font-size: 0.92rem;
+  font-family: inherit;
+  outline: none;
+  background: var(--white);
+}
+
+.toolbar input[type="search"] {
+  flex: 1;
+  min-width: 220px;
+}
+
+.info-jumlah {
+  color: #5b6a93;
+  font-size: 0.88rem;
+  margin-bottom: 10px;
+}
+
+.table-wrap {
+  background: var(--white);
+  border-radius: 14px;
+  overflow-x: auto;
+  box-shadow: 0 8px 24px rgba(11, 31, 75, 0.1);
+}
+
+table.data {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  min-width: 960px;
+}
+
+table.data th {
+  background: var(--navy);
+  color: var(--gold-light);
+  text-align: left;
+  padding: 12px 14px;
+  white-space: nowrap;
+}
+
+table.data td {
+  padding: 11px 14px;
+  border-bottom: 1px solid #e6eaf5;
+  vertical-align: top;
+}
+
+table.data tbody tr:hover td {
+  background: var(--bg-soft);
+}
+
+table.data tr.kosong td {
+  text-align: center;
+  padding: 36px;
+  color: #5b6a93;
+}
+
+.link-detail {
+  background: none;
+  border: none;
+  color: var(--navy);
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* ----- Jendela detail ----- */
+dialog.detail {
+  border: none;
+  border-radius: 16px;
+  padding: 0;
+  width: min(700px, 94vw);
+  max-height: 88vh;
+  box-shadow: 0 20px 60px rgba(7, 20, 51, 0.4);
+}
+
+dialog.detail::backdrop {
+  background: rgba(7, 20, 51, 0.6);
+}
+
+.detail-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 24px;
+  background: var(--navy);
+  color: var(--gold-light);
+  position: sticky;
+  top: 0;
+}
+
+.detail-head h2 {
+  font-size: 1.1rem;
+}
+
+.detail-body {
+  padding: 22px 24px 26px;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 24px;
+  margin-bottom: 22px;
+}
+
+.detail-grid .full {
+  grid-column: 1 / -1;
+}
+
+.detail-grid dt {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.detail-grid dd {
+  color: var(--navy);
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.berkas-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.detail-body h3 {
+  color: var(--navy);
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.cetak-judul {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .stat-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bar-actions span {
+    display: none;
+  }
+}
+
+/* ----- Cetak ----- */
+@page {
+  size: A4 landscape;
+  margin: 10mm;
+}
+
+@media print {
+  .admin-bar,
+  .stat-row,
+  .toolbar,
+  .kolom-aksi,
+  dialog {
+    display: none !important;
+  }
+
+  .cetak-judul {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #000;
+  }
+
+  body.admin-body {
+    background: #fff;
+  }
+
+  .table-wrap {
+    box-shadow: none;
+    overflow: visible;
+  }
+
+  table.data {
+    min-width: 0;
+    font-size: 10px;
+  }
+
+  table.data th {
+    background: #e8e8e8 !important;
+    color: #000 !important;
+  }
+}
